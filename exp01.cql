@@ -101,3 +101,28 @@ SELECT * FROM employee_info  ;
 --    121 | 2020-06-15 18:30:00.000000+0000 |     Media |         CTO |  Karthik | 6500000
 
 
+
+INSERT INTO employee_info (emp_id , emp_name , designation , dateofjoining , salary , dept_name )
+VALUES ( 124, 'Harsha', 'COO', '2020-04-05', 1200000, 'Operations') USING TTL 15;
+
+/*
+ emp_id | dateofjoining                   | dept_name  | designation | emp_name    | project_name | salary
+--------+---------------------------------+------------+-------------+-------------+--------------+---------
+    120 | 2020-03-31 18:30:00.000000+0000 |      Games |         CEO |    Khrithik |     Valorant | 3500000
+    123 | 2020-06-15 18:30:00.000000+0000 |    Fashion |         AMB |      Kenish |          Gym | 4200000
+    122 | 2020-06-15 18:30:00.000000+0000 |  Marketing |         COM |     Krishna |        Otaku | 6900000
+    121 | 2020-06-15 18:30:00.000000+0000 |    Founder |         CTO | Karthikutty |          McD | 6500000
+    124 | 2020-04-04 18:30:00.000000+0000 | Operations |         COO |      Harsha |         null | 1200000
+*/
+
+-- after 15 secs
+
+/*
+ emp_id | dateofjoining                   | dept_name | designation | emp_name    | project_name | salary
+--------+---------------------------------+-----------+-------------+-------------+--------------+---------
+    120 | 2020-03-31 18:30:00.000000+0000 |     Games |         CEO |    Khrithik |     Valorant | 3500000
+    123 | 2020-06-15 18:30:00.000000+0000 |   Fashion |         AMB |      Kenish |          Gym | 4200000
+    122 | 2020-06-15 18:30:00.000000+0000 | Marketing |         COM |     Krishna |        Otaku | 6900000
+    121 | 2020-06-15 18:30:00.000000+0000 |   Founder |         CTO | Karthikutty |          McD | 6500000
+*/
+
