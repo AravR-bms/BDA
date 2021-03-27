@@ -29,36 +29,36 @@ APPLY BATCH ;
 
 SELECT * FROM employee_info ;
 
-// emp_id | dateofjoining                   | dept_name | designation | emp_name | salary
-//--------+---------------------------------+-----------+-------------+----------+---------
-//    120 | 2020-03-31 18:30:00.000000+0000 |     Games |         CEO | Khrithik | 3500000
-//    123 | 2020-06-15 18:30:00.000000+0000 |   Fashion |         AMB |   Kenish | 4200000
-//    122 | 2020-06-15 18:30:00.000000+0000 | Marketing |         COM |  Krishna | 6900000
-//    121 | 2020-06-15 18:30:00.000000+0000 |     Media |         CTO |  Karthik | 6500000
+-- emp_id | dateofjoining                   | dept_name | designation | emp_name | salary
+----------+---------------------------------+-----------+-------------+----------+---------
+--    120 | 2020-03-31 18:30:00.000000+0000 |     Games |         CEO | Khrithik | 3500000
+--    123 | 2020-06-15 18:30:00.000000+0000 |   Fashion |         AMB |   Kenish | 4200000
+--    122 | 2020-06-15 18:30:00.000000+0000 | Marketing |         COM |  Krishna | 6900000
+--    121 | 2020-06-15 18:30:00.000000+0000 |     Media |         CTO |  Karthik | 6500000
 
 
 
 UPDATE employee_info SET emp_name = 'Karthikutty' , dept_name = 'Founder' WHERE emp_id = 121;
 SELECT * FROM employee_info ;
 
-// emp_id | dateofjoining                   | dept_name | designation | emp_name | salary
-//--------+---------------------------------+-----------+-------------+----------+---------
-//    120 | 2020-03-31 18:30:00.000000+0000 |     Games |         CEO | Khrithik | 3500000
-//    123 | 2020-06-15 18:30:00.000000+0000 |   Fashion |         AMB |   Kenish | 4200000
-//    122 | 2020-06-15 18:30:00.000000+0000 | Marketing |         COM |  Krishna | 6900000
-//    121 | 2020-06-15 18:30:00.000000+0000 |     Media |         CTO |  Karthik | 6500000
+-- emp_id | dateofjoining                   | dept_name | designation | emp_name | salary
+----------+---------------------------------+-----------+-------------+----------+---------
+--    120 | 2020-03-31 18:30:00.000000+0000 |     Games |         CEO | Khrithik | 3500000
+--    123 | 2020-06-15 18:30:00.000000+0000 |   Fashion |         AMB |   Kenish | 4200000
+--    122 | 2020-06-15 18:30:00.000000+0000 | Marketing |         COM |  Krishna | 6900000
+--    121 | 2020-06-15 18:30:00.000000+0000 |     Media |         CTO |  Karthik | 6500000
 
 
 
 ALTER TABLE employee_info ADD project_name text;
 SELECT * FROM employee_info  ;
 
-// emp_id | dateofjoining                   | dept_name | designation | emp_name | salary
-//--------+---------------------------------+-----------+-------------+----------+---------
-//    120 | 2020-03-31 18:30:00.000000+0000 |     Games |         CEO | Khrithik | 3500000
-//    123 | 2020-06-15 18:30:00.000000+0000 |   Fashion |         AMB |   Kenish | 4200000
-//    122 | 2020-06-15 18:30:00.000000+0000 | Marketing |         COM |  Krishna | 6900000
-//    121 | 2020-06-15 18:30:00.000000+0000 |     Media |         CTO |  Karthik | 6500000
+-- emp_id | dateofjoining                   | dept_name | designation | emp_name | salary
+----------+---------------------------------+-----------+-------------+----------+---------
+--    120 | 2020-03-31 18:30:00.000000+0000 |     Games |         CEO | Khrithik | 3500000
+--    123 | 2020-06-15 18:30:00.000000+0000 |   Fashion |         AMB |   Kenish | 4200000
+--    122 | 2020-06-15 18:30:00.000000+0000 | Marketing |         COM |  Krishna | 6900000
+--    121 | 2020-06-15 18:30:00.000000+0000 |     Media |         CTO |  Karthik | 6500000
 
 
 
@@ -68,11 +68,11 @@ UPDATE employee_info SET project_name = 'Otaku' WHERE emp_id = 122 ;
 UPDATE employee_info SET project_name = 'Gym' WHERE emp_id = 123 ;
 SELECT * FROM employee_info  ;
 
-// emp_id | dateofjoining                   | dept_name | designation | emp_name | salary
-//--------+---------------------------------+-----------+-------------+----------+---------
-//    120 | 2020-03-31 18:30:00.000000+0000 |     Games |         CEO | Khrithik | 3500000
-//    123 | 2020-06-15 18:30:00.000000+0000 |   Fashion |         AMB |   Kenish | 4200000
-//    122 | 2020-06-15 18:30:00.000000+0000 | Marketing |         COM |  Krishna | 6900000
-//    121 | 2020-06-15 18:30:00.000000+0000 |     Media |         CTO |  Karthik | 6500000
+-- emp_id | dateofjoining                   | dept_name | designation | emp_name | salary
+----------+---------------------------------+-----------+-------------+----------+---------
+--    120 | 2020-03-31 18:30:00.000000+0000 |     Games |         CEO | Khrithik | 3500000
+--    123 | 2020-06-15 18:30:00.000000+0000 |   Fashion |         AMB |   Kenish | 4200000
+--    122 | 2020-06-15 18:30:00.000000+0000 | Marketing |         COM |  Krishna | 6900000
+--    121 | 2020-06-15 18:30:00.000000+0000 |     Media |         CTO |  Karthik | 6500000
 
 
