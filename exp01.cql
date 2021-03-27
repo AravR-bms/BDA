@@ -5,13 +5,13 @@ USE employee ;
 
 
 CREATE TABLE employee_info ( 
-emp_id int PRIMARY KEY, 
-emp_name text, 
-designation text, 
-DateOfJoining timestamp, 
-salary int, 
-dept_name text 
-);
+    emp_id int PRIMARY KEY, 
+    emp_name text, 
+    designation text, 
+    DateOfJoining timestamp, 
+    salary int, 
+    dept_name text 
+    );
 
 DESC TABLE employee_info ;
 
@@ -41,7 +41,7 @@ CREATE TABLE employee.employee_info (
 
 
 
-BEGIN BATCH             
+BEGIN BATCH
 INSERT INTO employee_info (emp_id , emp_name , designation , dateofjoining , salary , dept_name )
 VALUES ( 120, 'Khrithik', 'CEO', '2020-04-01', 3500000, 'Games')
 INSERT INTO employee_info (emp_id , emp_name , designation , dateofjoining , salary , dept_name )
@@ -54,37 +54,40 @@ APPLY BATCH ;
 
 SELECT * FROM employee_info ;
 
--- emp_id | dateofjoining                   | dept_name | designation | emp_name | salary
-----------+---------------------------------+-----------+-------------+----------+---------
---    120 | 2020-03-31 18:30:00.000000+0000 |     Games |         CEO | Khrithik | 3500000
---    123 | 2020-06-15 18:30:00.000000+0000 |   Fashion |         AMB |   Kenish | 4200000
---    122 | 2020-06-15 18:30:00.000000+0000 | Marketing |         COM |  Krishna | 6900000
---    121 | 2020-06-15 18:30:00.000000+0000 |     Media |         CTO |  Karthik | 6500000
-
+/*
+ emp_id | dateofjoining                   | dept_name | designation | emp_name | salary
+--------+---------------------------------+-----------+-------------+----------+---------
+    120 | 2020-03-31 18:30:00.000000+0000 |     Games |         CEO | Khrithik | 3500000
+    123 | 2020-06-15 18:30:00.000000+0000 |   Fashion |         AMB |   Kenish | 4200000
+    122 | 2020-06-15 18:30:00.000000+0000 | Marketing |         COM |  Krishna | 6900000
+    121 | 2020-06-15 18:30:00.000000+0000 |     Media |         CTO |  Karthik | 6500000
+*/
 
 
 UPDATE employee_info SET emp_name = 'Karthikutty' , dept_name = 'Founder' WHERE emp_id = 121;
 SELECT * FROM employee_info ;
 
--- emp_id | dateofjoining                   | dept_name | designation | emp_name | salary
-----------+---------------------------------+-----------+-------------+----------+---------
---    120 | 2020-03-31 18:30:00.000000+0000 |     Games |         CEO | Khrithik | 3500000
---    123 | 2020-06-15 18:30:00.000000+0000 |   Fashion |         AMB |   Kenish | 4200000
---    122 | 2020-06-15 18:30:00.000000+0000 | Marketing |         COM |  Krishna | 6900000
---    121 | 2020-06-15 18:30:00.000000+0000 |     Media |         CTO |  Karthik | 6500000
-
+/*
+ emp_id | dateofjoining                   | dept_name | designation | emp_name | salary
+--------+---------------------------------+-----------+-------------+----------+---------
+    120 | 2020-03-31 18:30:00.000000+0000 |     Games |         CEO | Khrithik | 3500000
+    123 | 2020-06-15 18:30:00.000000+0000 |   Fashion |         AMB |   Kenish | 4200000
+    122 | 2020-06-15 18:30:00.000000+0000 | Marketing |         COM |  Krishna | 6900000
+    121 | 2020-06-15 18:30:00.000000+0000 |     Media |         CTO |  Karthik | 6500000
+*/
 
 
 ALTER TABLE employee_info ADD project_name text;
 SELECT * FROM employee_info  ;
 
--- emp_id | dateofjoining                   | dept_name | designation | emp_name | salary
-----------+---------------------------------+-----------+-------------+----------+---------
---    120 | 2020-03-31 18:30:00.000000+0000 |     Games |         CEO | Khrithik | 3500000
---    123 | 2020-06-15 18:30:00.000000+0000 |   Fashion |         AMB |   Kenish | 4200000
---    122 | 2020-06-15 18:30:00.000000+0000 | Marketing |         COM |  Krishna | 6900000
---    121 | 2020-06-15 18:30:00.000000+0000 |     Media |         CTO |  Karthik | 6500000
-
+/*
+ emp_id | dateofjoining                   | dept_name | designation | emp_name | salary
+--------+---------------------------------+-----------+-------------+----------+---------
+    120 | 2020-03-31 18:30:00.000000+0000 |     Games |         CEO | Khrithik | 3500000
+    123 | 2020-06-15 18:30:00.000000+0000 |   Fashion |         AMB |   Kenish | 4200000
+    122 | 2020-06-15 18:30:00.000000+0000 | Marketing |         COM |  Krishna | 6900000
+    121 | 2020-06-15 18:30:00.000000+0000 |     Media |         CTO |  Karthik | 6500000
+*/
 
 
 UPDATE employee_info SET project_name = 'Valorant' WHERE emp_id = 120 ;
@@ -93,13 +96,14 @@ UPDATE employee_info SET project_name = 'Otaku' WHERE emp_id = 122 ;
 UPDATE employee_info SET project_name = 'Gym' WHERE emp_id = 123 ;
 SELECT * FROM employee_info  ;
 
--- emp_id | dateofjoining                   | dept_name | designation | emp_name | salary
-----------+---------------------------------+-----------+-------------+----------+---------
---    120 | 2020-03-31 18:30:00.000000+0000 |     Games |         CEO | Khrithik | 3500000
---    123 | 2020-06-15 18:30:00.000000+0000 |   Fashion |         AMB |   Kenish | 4200000
---    122 | 2020-06-15 18:30:00.000000+0000 | Marketing |         COM |  Krishna | 6900000
---    121 | 2020-06-15 18:30:00.000000+0000 |     Media |         CTO |  Karthik | 6500000
-
+/*
+ emp_id | dateofjoining                   | dept_name | designation | emp_name | salary
+--------+---------------------------------+-----------+-------------+----------+---------
+    120 | 2020-03-31 18:30:00.000000+0000 |     Games |         CEO | Khrithik | 3500000
+    123 | 2020-06-15 18:30:00.000000+0000 |   Fashion |         AMB |   Kenish | 4200000
+    122 | 2020-06-15 18:30:00.000000+0000 | Marketing |         COM |  Krishna | 6900000
+    121 | 2020-06-15 18:30:00.000000+0000 |     Media |         CTO |  Karthik | 6500000
+*/
 
 
 INSERT INTO employee_info (emp_id , emp_name , designation , dateofjoining , salary , dept_name )
@@ -125,4 +129,3 @@ VALUES ( 124, 'Harsha', 'COO', '2020-04-05', 1200000, 'Operations') USING TTL 15
     122 | 2020-06-15 18:30:00.000000+0000 | Marketing |         COM |     Krishna |        Otaku | 6900000
     121 | 2020-06-15 18:30:00.000000+0000 |   Founder |         CTO | Karthikutty |          McD | 6500000
 */
-
