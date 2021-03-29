@@ -66,7 +66,7 @@ SELECT * FROM library_info ;
      112 |   Krishna |       BDA |     112 |    2020-07-09 |             2
 */
 
-SELECT * FROM library_info WHERE stud_id = 3;
+SELECT * FROM library_info WHERE stud_id = 112;
 
 /*
  stud_id | stud_name | book_name | book_id | date_of_issue | counter_value
